@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Keil Project",
+            "type": "shell",
+            "command": "\"D:\\keil\\core\\UV4.exe\" -b D:\\desktop\\design\\test1\\Project.uvprojx -j0 -o ${workspaceFolder}/build.log",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Clean Keil Project",
+            "type": "shell",
+            "command": "uv4 -c ${workspaceFolder}/Project.uvprojx",
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}

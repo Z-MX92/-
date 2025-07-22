@@ -1,0 +1,91 @@
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'D:\keil\core\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling esp8266.c...
+..\Net\device\esp8266.h(24): warning:  #1295-D: Deprecated declaration ESP8266_disable - give arg types
+  void ESP8266_disable();
+..\Net\device\esp8266.h(25): warning:  #1295-D: Deprecated declaration ESP8266_enable - give arg types
+  void ESP8266_enable();
+..\Net\device\esp8266.c(34): error:  #20: identifier "USART3_RX_BUF" is undefined
+  	memset(
+sp8266_RX_BUF, 0, sizeof(esp8266_RX_BUF));
+..\Net\device\esp8266.c(35): error:  #20: identifier "USART3_RX_STA" is undefined
+  	
+sp8266_RX_STA = 0;
+..\Net\device\esp8266.c(52): error:  #20: identifier "USART3_RX_STA" is undefined
+  	if(
+sp8266_RX_STA&0x8000){
+..\Net\device\esp8266.c(77): warning:  #223-D: function "Usart_SendString" declared implicitly
+  	Usart_SendString(esp8266_uart, (unsigned char *)cmd, strlen((const char *)cmd));
+..\Net\device\esp8266.c(83): error:  #20: identifier "USART3_RX_BUF" is undefined
+  			if(strstr((const char *)
+sp8266_RX_BUF, res) != NULL)		//如果检索到关键�?
+..\Net\device\esp8266.c(122): warning:  #223-D: function "Usart_SendString" declared implicitly
+  		Usart_SendString(esp8266_uart, data, len);		//发送设备连接请求数�?
+..\Net\device\esp8266.c(149): error:  #20: identifier "USART3_RX_BUF" is undefined
+  			ptrIPD = strstr((char *)
+sp8266_RX_BUF, "IPD,");				//搜索“IPD”头
+..\Net\device\esp8266.c: 4 warnings, 5 errors
+compiling main.c...
+..\Net\device\esp8266.h(24): warning:  #1295-D: Deprecated declaration ESP8266_disable - give arg types
+  void ESP8266_disable();
+..\Net\device\esp8266.h(25): warning:  #1295-D: Deprecated declaration ESP8266_enable - give arg types
+  void ESP8266_enable();
+..\Net\onenet\onenet.h(15): warning:  #1295-D: Deprecated declaration onenet_state - give arg types
+  uint8_t onenet_state();
+..\User\main.c: 3 warnings, 0 errors
+compiling onenet.c...
+..\Net\device\esp8266.h(24): warning:  #1295-D: Deprecated declaration ESP8266_disable - give arg types
+  void ESP8266_disable();
+..\Net\device\esp8266.h(25): warning:  #1295-D: Deprecated declaration ESP8266_enable - give arg types
+  void ESP8266_enable();
+..\Net\onenet\onenet.h(15): warning:  #1295-D: Deprecated declaration onenet_state - give arg types
+  uint8_t onenet_state();
+..\Net\onenet\onenet.c(112): error:  #7: unrecognized token
+  extern float gy906_temp�?
+..\Net\onenet\onenet.c(112): error:  #65: expected a ";"
+  extern float gy906_temp�?
+..\Net\onenet\onenet.c(112): error:  #7: unrecognized token
+  extern float gy906_temp�?
+..\Net\onenet\onenet.c(112): error:  #7: unrecognized token
+  extern float gy906_temp�?
+..\Net\onenet\onenet.c(164): warning:  #12-D: parsing restarts here after previous syntax error
+  		else;
+..\Net\onenet\onenet.c(166): error:  #169: expected a declaration
+  	}
+..\Net\onenet\onenet.c(268): warning:  #12-D: parsing restarts here after previous syntax error
+  			result = MQTT_UnPacketPublish(cmd, &cmdid_topic, &topic_len, &req_payload, &req_len, &qos, &pkt_id);
+..\Net\onenet\onenet.c(269): error:  #169: expected a declaration
+  			if(result == 0)
+..\Net\onenet\onenet.c(292): warning:  #12-D: parsing restarts here after previous syntax error
+  				led_json = cJSON_GetObjectItem(params,"led");
+..\Net\onenet\onenet.c(293): error:  #169: expected a declaration
+  				if(led_json != NULL)
+..\Net\onenet\onenet.c(299): warning:  #12-D: parsing restarts here after previous syntax error
+  				cJSON_Delete(root);	
+..\Net\onenet\onenet.c(300): error:  #169: expected a declaration
+  			}
+..\Net\onenet\onenet.c(303): error:  #169: expected a declaration
+  		case MQTT_PKT_PUBACK:														//发送Publish消息，平台回复的Ack
+..\Net\onenet\onenet.c(308): warning:  #12-D: parsing restarts here after previous syntax error
+  		break;
+..\Net\onenet\onenet.c(310): error:  #169: expected a declaration
+  		case MQTT_PKT_SUBACK:																//发送Subscribe消息的Ack
+..\Net\onenet\onenet.c(313): warning:  #12-D: parsing restarts here after previous syntax error
+  				;
+..\Net\onenet\onenet.c(316): error:  #169: expected a declaration
+  		break;
+..\Net\onenet\onenet.c(318): error:  #169: expected a declaration
+  		default:
+..\Net\onenet\onenet.c(320): error:  #169: expected a declaration
+  		break;
+..\Net\onenet\onenet.c(321): error:  #169: expected a declaration
+  	}
+..\Net\onenet\onenet.c(325): error:  #169: expected a declaration
+  	if(result == -1)
+..\Net\onenet\onenet.c(328): error:  #169: expected a declaration
+  	if(type == MQTT_PKT_CMD || type == MQTT_PKT_PUBLISH)
+..\Net\onenet\onenet.c(339): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+..\Net\onenet\onenet.c: 10 warnings, 16 errors
+".\Objects\Project.axf" - 21 Error(s), 17 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:02

@@ -1,0 +1,12 @@
+1.AT
+2.AT+RST
+3.AT+CWMODE=1
+4.AT+CWDHCP=1,1
+5.AT+CWJAP="wifi热点","wifi密码"
+6.AT+CIPMODE=1
+7.AT+CIPSTART="TCP","www.bemfa.com",8344
+8.AT+CIPSEND
+9.cmd=2&uid=d311330c76795c8b2135f995e17ed468&topic=temp&msg=#32
+
+
+
